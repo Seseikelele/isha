@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-bootstrap = "*"
+flask-moment = "*"
+flask-wtf = "*"
+pymongo = "*"
+mongoengine = "*"
+flask-mail = "*"
+flask-mongoengine = "*"
+flask-login = "*"
+werkzeug = "*"
+
+[dev-packages]
+pylint = "*"
+
+[requires]
+python_version = "3.7"
