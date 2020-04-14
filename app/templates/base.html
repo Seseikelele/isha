@@ -17,7 +17,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ url_for('index') }}">Isha</a>
+				<a class="navbar-brand" href="{{ url_for('main.index') }}">Isha</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -25,9 +25,9 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 				{% if current_user.is_authenticated %}
-					<li><a href="{{ url_for('logout') }}">logout</a></li>
+					<li><a href="{{ url_for('auth.logout') }}">logout</a></li>
 				{% else %}
-					<li><a href="{{ url_for('login') }}">login</a></li>
+					<li><a href="{{ url_for('auth.login') }}">login</a></li>
 				{% endif %}
 				</ul>
 			</div>
