@@ -15,7 +15,7 @@ class User(UserMixin, db.Document):
 	confirmed = db.BooleanField(default=False)
 	username = db.StringField(max_length=100, required=True, unique=True)
 	pwhash = db.StringField(max_length=128, required=True)
-	role_id = db.ReferenceField()
+	role_id = db.ObjectIdField()
 
 	def set_password(self, password):
 		self.pwhash = generate_password_hash(password)
