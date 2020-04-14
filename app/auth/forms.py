@@ -14,6 +14,7 @@ class RegistrationForm(FlaskForm):
 	username = wtf.StringField('username', validators=[DataRequired(), Length(1, 100)])
 	password = wtf.PasswordField('password', validators=[DataRequired(), EqualTo('password2', 'passwords must match')])
 	password2 = wtf.PasswordField('confirm password', validators=[DataRequired()])
+	submit = wtf.SubmitField('log in')
 
 	def validate_username(self, field):
 		if User.objects.get(username=field.data) is not None:
